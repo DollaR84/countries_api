@@ -11,7 +11,7 @@ def console_output(headers: list[str], data: list[Country]):
     table = PrettyTable()
     table.field_names = headers
     for country in data:
-        table.add_row([country.name, country.capital, country.flags])
+        table.add_row(country.dict().values())
 
     print(table)
 
